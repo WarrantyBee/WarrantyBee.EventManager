@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ASa4/Iq/6hc=",
+  "dgSpecHash": "8NGBlcTuQfQ=",
   "success": true,
   "projectFilePath": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Application\\WarrantyBee.EventManager.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ARIJIT\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.8\\microsoft.extensions.dependencyinjection.abstractions.10.0.8.nupkg.sha512"
+  ],
   "logs": []
 }

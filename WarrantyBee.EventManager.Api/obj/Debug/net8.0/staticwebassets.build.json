@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Np9wEkeu8IhPh6Lt/tIDIUgykQgEBNn3yqFyoHZ2mOU=",
+  "Source": "WarrantyBee.EventManager.Api",
+  "BasePath": "_content/WarrantyBee.EventManager.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
