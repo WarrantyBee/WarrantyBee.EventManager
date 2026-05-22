@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarrantyBee.EventManager.Api", "WarrantyBee.EventManager.Api\WarrantyBee.EventManager.Api.csproj", "{B5EA3B3B-04A2-40E7-A2C3-4D0A2708DFEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarrantyBee.EventManager.Application", "WarrantyBee.EventManager.Application\WarrantyBee.EventManager.Application.csproj", "{C15D1715-4A55-4600-B417-8A72F2B7D22C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarrantyBee.EventManager.Domain", "WarrantyBee.EventManager.Domain\WarrantyBee.EventManager.Domain.csproj", "{B06182F7-1653-4C42-B747-DE3AE33525FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarrantyBee.EventManager.Infrastructure", "WarrantyBee.EventManager.Infrastructure\WarrantyBee.EventManager.Infrastructure.csproj", "{2EB7AB43-FF37-4E4C-8392-7515FFB7A942}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5EA3B3B-04A2-40E7-A2C3-4D0A2708DFEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5EA3B3B-04A2-40E7-A2C3-4D0A2708DFEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5EA3B3B-04A2-40E7-A2C3-4D0A2708DFEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5EA3B3B-04A2-40E7-A2C3-4D0A2708DFEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15D1715-4A55-4600-B417-8A72F2B7D22C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15D1715-4A55-4600-B417-8A72F2B7D22C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15D1715-4A55-4600-B417-8A72F2B7D22C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15D1715-4A55-4600-B417-8A72F2B7D22C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B06182F7-1653-4C42-B747-DE3AE33525FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06182F7-1653-4C42-B747-DE3AE33525FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06182F7-1653-4C42-B747-DE3AE33525FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06182F7-1653-4C42-B747-DE3AE33525FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB7AB43-FF37-4E4C-8392-7515FFB7A942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB7AB43-FF37-4E4C-8392-7515FFB7A942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB7AB43-FF37-4E4C-8392-7515FFB7A942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB7AB43-FF37-4E4C-8392-7515FFB7A942}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
