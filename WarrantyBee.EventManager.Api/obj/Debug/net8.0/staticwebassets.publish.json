@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "4+iyWWmcwlUjiGUMign5TlXl4pApCdWrjZeLl5ZrLN0=",
+  "Source": "WarrantyBee.EventManager.Api",
+  "BasePath": "_content/WarrantyBee.EventManager.Api",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WarrantyBee.EventManager.Api\\wwwroot",
+      "Source": "WarrantyBee.EventManager.Api",
+      "ContentRoot": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\",
+      "BasePath": "_content/WarrantyBee.EventManager.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\favicon.ico",
+      "SourceId": "WarrantyBee.EventManager.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\",
+      "BasePath": "_content/WarrantyBee.EventManager.Api",
+      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kmcqvqbipl",
+      "Integrity": "lOaaqgUg2NG/J4DtEbUWo1y8Xo7Ao2ZPS0gFnLOOmKU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\index.html",
+      "SourceId": "WarrantyBee.EventManager.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\",
+      "BasePath": "_content/WarrantyBee.EventManager.Api",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cufjn4q2ch",
+      "Integrity": "9P350wp64LkIhXzoKKPTgU6uv7+aHopDkPFsfp7I5CM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15406"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lOaaqgUg2NG/J4DtEbUWo1y8Xo7Ao2ZPS0gFnLOOmKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 May 2026 20:34:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lOaaqgUg2NG/J4DtEbUWo1y8Xo7Ao2ZPS0gFnLOOmKU="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.kmcqvqbipl.ico",
+      "AssetFile": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15406"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lOaaqgUg2NG/J4DtEbUWo1y8Xo7Ao2ZPS0gFnLOOmKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 May 2026 20:34:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kmcqvqbipl"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lOaaqgUg2NG/J4DtEbUWo1y8Xo7Ao2ZPS0gFnLOOmKU="
+        }
+      ]
+    },
+    {
+      "Route": "index.cufjn4q2ch.html",
+      "AssetFile": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9P350wp64LkIhXzoKKPTgU6uv7+aHopDkPFsfp7I5CM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 23 May 2026 08:54:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cufjn4q2ch"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9P350wp64LkIhXzoKKPTgU6uv7+aHopDkPFsfp7I5CM="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9P350wp64LkIhXzoKKPTgU6uv7+aHopDkPFsfp7I5CM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 23 May 2026 08:54:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9P350wp64LkIhXzoKKPTgU6uv7+aHopDkPFsfp7I5CM="
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\bin\Release\net8.0\WarrantyBee.EventManager.Application.deps.json
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\bin\Release\net8.0\WarrantyBee.EventManager.Application.dll
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\bin\Release\net8.0\WarrantyBee.EventManager.Application.pdb
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\bin\Release\net8.0\WarrantyBee.EventManager.Domain.dll
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\bin\Release\net8.0\WarrantyBee.EventManager.Domain.pdb
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\WarrantyBee.EventManager.Application.csproj.AssemblyReference.cache
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\WarrantyBee.EventManager.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\WarrantyBee.EventManager.Application.AssemblyInfoInputs.cache
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\WarrantyBee.EventManager.Application.AssemblyInfo.cs
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\WarrantyBee.EventManager.Application.csproj.CoreCompileInputs.cache
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\WarrantyBee.EventManager.Application.sourcelink.json
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\Warranty.E7793FBC.Up2Date
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\WarrantyBee.EventManager.Application.dll
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\refint\WarrantyBee.EventManager.Application.dll
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\WarrantyBee.EventManager.Application.pdb
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Release\net8.0\ref\WarrantyBee.EventManager.Application.dll

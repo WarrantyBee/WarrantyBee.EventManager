@@ -124,3 +124,5 @@ D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\obj\Debug\n
 D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\obj\Debug\net8.0\WarrantyBee.EventManager.Api.pdb
 D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\obj\Debug\net8.0\WarrantyBee.EventManager.Api.genruntimeconfig.cache
 D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\obj\Debug\net8.0\ref\WarrantyBee.EventManager.Api.dll
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\bin\Debug\net8.0\WarrantyBee.EventManager.Api.staticwebassets.runtime.json
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\bin\Debug\net8.0\web.config

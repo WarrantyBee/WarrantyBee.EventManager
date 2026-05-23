@@ -5,6 +5,9 @@ using WarrantyBee.EventManager.Domain.Entities;
 
 namespace WarrantyBee.EventManager.Infrastructure.Persistence;
 
+/// <summary>
+/// Implementation of <see cref="IEventRepository"/> using Dapper.
+/// </summary>
 public class EventRepository : IEventRepository
 {
     private readonly IDbConnectionFactory _connectionFactory;
@@ -17,20 +20,11 @@ public class EventRepository : IEventRepository
     public async Task<long> LogEventAsync(EventLog eventLog)
     {
         using var connection = _connectionFactory.CreateConnection();
-        var parameters = new DynamicParameters();
-        parameters.Add("@in_event_type", eventLog.EventType);
-        parameters.Add("@in_payload", eventLog.Payload);
-        parameters.Add("@in_status", eventLog.Status);
-
-        // Simple insert for now, assuming usp_LogEvent or similar exists
-        // Actually, we created tblEventLogs with usp_CreateTable which adds audit columns.
-        // We'll use a direct INSERT for performance at scale, or create a specific proc.
-        // Given the scale, direct Dapper with parameterized SQL is often faster than sprocs for simple inserts.
         var sql = @"INSERT INTO tblEventLogs (internal_id, event_type, payload, status, created_at, void) 
-                    VALUES (NEWID(), @in_event_type, @in_payload, @in_status, GETUTCDATE(), 0);
+                    VALUES (NEWID(), @EventType, @Payload, @Status, GETUTCDATE(), 0);
                     SELECT CAST(SCOPE_IDENTITY() as BIGINT);";
         
-        return await connection.ExecuteScalarAsync<long>(sql, parameters);
+        return await connection.ExecuteScalarAsync<long>(sql, eventLog);
     }
 
     public async Task UpdateEventStatusAsync(long id, string status)
@@ -48,6 +42,9 @@ public class EventRepository : IEventRepository
     }
 }
 
+/// <summary>
+/// Implementation of <see cref="ISubscriptionRepository"/> using Dapper.
+/// </summary>
 public class SubscriptionRepository : ISubscriptionRepository
 {
     private readonly IDbConnectionFactory _connectionFactory;
@@ -60,8 +57,17 @@ public class SubscriptionRepository : ISubscriptionRepository
     public async Task<IEnumerable<EventSubscription>> GetSubscriptionsAsync(string eventType)
     {
         using var connection = _connectionFactory.CreateConnection();
-        return await connection.QueryAsync<EventSubscription>(
-            "SELECT * FROM tblEventSubscriptions WHERE event_type = @eventType AND is_active = 1 AND void = 0", 
-            new { eventType });
+        // Use explicit aliases to map snake_case columns to PascalCase properties
+        var sql = @"SELECT 
+                        id AS Id, 
+                        user_id AS UserId, 
+                        event_type AS EventType, 
+                        webhook_url AS WebhookUrl, 
+                        secret_key AS SecretKey, 
+                        is_active AS IsActive 
+                    FROM tblEventSubscriptions 
+                    WHERE event_type = @eventType AND is_active = 1 AND void = 0";
+        
+        return await connection.QueryAsync<EventSubscription>(sql, new { eventType });
     }
 }
