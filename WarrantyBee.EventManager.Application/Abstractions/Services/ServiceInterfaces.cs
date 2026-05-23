@@ -10,3 +10,10 @@ public interface IWebhookService
 {
     Task<bool> SendWebhookAsync(string url, string payload, string secret);
 }
+
+public interface ICacheService
+{
+    Task SetAsync(string key, string value, int? expirySeconds = null);
+    Task<string?> GetAsync(string key);
+    Task DeleteAsync(string key);
+}

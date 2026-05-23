@@ -1,86 +1,61 @@
 using System.Security.Cryptography;
 using System.Text;
+using WarrantyBee.EventManager.Application.Abstractions.Persistence;
 using WarrantyBee.EventManager.Application.Abstractions.Services;
 
 namespace WarrantyBee.EventManager.Infrastructure.Services;
 
 /// <summary>
-/// Implementation of <see cref="IApiKeyService"/> using AES encryption to wrap a secret within the API Key.
+/// Implementation of <see cref="IApiKeyService"/> using hashing, database verification, and Redis caching.
 /// </summary>
 public class ApiKeyService : IApiKeyService
 {
-    private readonly byte[] _encryptionKey;
-    private const string SecretPrefix = "WB_INTERNAL_SECRET_";
+    private readonly IApiKeyRepository _keyRepository;
+    private readonly ICacheService _cacheService;
+    private readonly ITelemetryService _telemetry;
 
-    public ApiKeyService()
+    public ApiKeyService(
+        IApiKeyRepository keyRepository,
+        ICacheService cacheService,
+        ITelemetryService telemetry)
     {
-        var key = Environment.GetEnvironmentVariable("WB__API_ENCRYPTION_KEY") ?? "Default_Shared_Secret_Must_Be_32_Chars!!";
-        // Ensure key is exactly 32 bytes for AES-256
-        _encryptionKey = Encoding.UTF8.GetBytes(key.PadRight(32).Substring(0, 32));
+        _keyRepository = keyRepository;
+        _cacheService = cacheService;
+        _telemetry = telemetry;
     }
 
-    public string GenerateKey(string clientName)
+    public async Task<bool> ValidateAsync(string appId, string appSecret)
     {
-        var rawPayload = $"{SecretPrefix}{clientName}|{DateTime.UtcNow:O}";
-        return Encrypt(rawPayload);
-    }
+        if (string.IsNullOrWhiteSpace(appId) || string.IsNullOrWhiteSpace(appSecret)) return false;
 
-    public string? ValidateKey(string apiKey)
-    {
-        if (string.IsNullOrWhiteSpace(apiKey)) return null;
+        var secretHash = ComputeHash(appSecret);
+        var cacheKey = $"apikey:{appId}:{secretHash}";
 
-        try
+        // 1. Check Cache
+        var cachedResult = await _cacheService.GetAsync(cacheKey);
+        if (cachedResult != null)
         {
-            var decrypted = Decrypt(apiKey);
-            if (!decrypted.StartsWith(SecretPrefix)) return null;
-
-            var parts = decrypted.Replace(SecretPrefix, "").Split('|');
-            return parts[0]; // Return client name
-        }
-        catch
-        {
-            return null;
-        }
-    }
-
-    private string Encrypt(string plainText)
-    {
-        using var aes = Aes.Create();
-        aes.Key = _encryptionKey;
-        aes.GenerateIV();
-
-        using var encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
-        using var ms = new MemoryStream();
-        ms.Write(aes.IV, 0, aes.IV.Length);
-
-        using (var cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
-        using (var sw = new StreamWriter(cs))
-        {
-            sw.Write(plainText);
+            return cachedResult == "1";
         }
 
-        return Convert.ToBase64String(ms.ToArray());
+        // 2. Check Database
+        var isValid = await _keyRepository.ValidateAsync(appId, secretHash);
+
+        // 3. Cache Result (5 minutes)
+        await _cacheService.SetAsync(cacheKey, isValid ? "1" : "0", 300);
+
+        if (!isValid)
+        {
+            _telemetry.Log(Domain.Enums.LogLevel.Warn, $"Invalid API Key attempt for AppId: {appId}");
+        }
+
+        return isValid;
     }
 
-    private string Decrypt(string cipherText)
+    private string ComputeHash(string input)
     {
-        var fullCipher = Convert.FromBase64String(cipherText);
-        using var aes = Aes.Create();
-        aes.Key = _encryptionKey;
-
-        var iv = new byte[aes.BlockSize / 8];
-        var cipher = new byte[fullCipher.Length - iv.Length];
-
-        Array.Copy(fullCipher, iv, iv.Length);
-        Array.Copy(fullCipher, iv.Length, cipher, 0, cipher.Length);
-
-        aes.IV = iv;
-
-        using var decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
-        using var ms = new MemoryStream(cipher);
-        using var cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read);
-        using var sr = new StreamReader(cs);
-
-        return sr.ReadToEnd();
+        using var sha256 = SHA256.Create();
+        var bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
+        return Convert.ToHexString(bytes).ToLower();
     }
 }

@@ -18,3 +18,8 @@ public interface INotificationRepository
 {
     Task CreateNotificationAsync(Notification notification);
 }
+
+public interface IApiKeyRepository
+{
+    Task<bool> ValidateAsync(string appId, string secretHash);
+}

@@ -71,3 +71,31 @@ public class SubscriptionRepository : ISubscriptionRepository
         return await connection.QueryAsync<EventSubscription>(sql, new { eventType });
     }
 }
+
+/// <summary>
+/// Implementation of <see cref="IApiKeyRepository"/> for validating stateful API keys.
+/// </summary>
+public class ApiKeyRepository : IApiKeyRepository
+{
+    private readonly IDbConnectionFactory _connectionFactory;
+
+    public ApiKeyRepository(IDbConnectionFactory connectionFactory)
+    {
+        _connectionFactory = connectionFactory;
+    }
+
+    public async Task<bool> ValidateAsync(string appId, string secretHash)
+    {
+        using var connection = _connectionFactory.CreateConnection();
+        var sql = @"SELECT COUNT(1) 
+                    FROM tblApiKeys k 
+                    JOIN tblApiClients c ON k.client_id = c.id 
+                    WHERE c.app_id = @appId 
+                    AND k.secret_hash = @secretHash 
+                    AND k.is_revoked = 0 
+                    AND k.expires_at > GETUTCDATE() 
+                    AND k.void = 0";
+        var count = await connection.ExecuteScalarAsync<int>(sql, new { appId, secretHash });
+        return count > 0;
+    }
+}
