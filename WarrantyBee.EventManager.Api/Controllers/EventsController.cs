@@ -1,18 +1,27 @@
 using Microsoft.AspNetCore.Mvc;
 using WarrantyBee.EventManager.Application.Abstractions.Services;
 using WarrantyBee.EventManager.Application.Contracts.Events;
+using WarrantyBee.EventManager.Api.Filters;
 
 namespace WarrantyBee.EventManager.Api.Controllers;
 
 [ApiController]
 [Route("api/events")]
+[ApiKey]
 public class EventsController : ControllerBase
 {
     private readonly IEventStreamService _streamService;
+    private readonly ITelemetryService _telemetry;
 
-    public EventsController(IEventStreamService streamService)
+    /// <summary>
+    /// Initializes a new instance of the <see cref="EventsController"/> class.
+    /// </summary>
+    /// <param name="streamService">The service used for interacting with the event stream.</param>
+    /// <param name="telemetry">The telemetry service for tracking metrics.</param>
+    public EventsController(IEventStreamService streamService, ITelemetryService telemetry)
     {
         _streamService = streamService;
+        _telemetry = telemetry;
     }
 
     /// <summary>
@@ -29,8 +38,12 @@ public class EventsController : ControllerBase
             return BadRequest("Event Type and Data are required.");
         }
 
+        _telemetry.Log(Domain.Enums.LogLevel.Info, $"Ingesting event: {evt.Type}");
+
         // Push directly to Redis Stream (The shock-absorber)
         await _streamService.PublishAsync("main_event_stream", evt);
+
+        _telemetry.TrackEvent("EventIngested", new Dictionary<string, object> { ["EventType"] = evt.Type });
 
         // Immediately return 202 to the caller to free up the request thread
         return Accepted();

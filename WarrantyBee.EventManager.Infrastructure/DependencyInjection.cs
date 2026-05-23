@@ -22,6 +22,7 @@ public static class DependencyInjection
         
         services.AddSingleton<IEventStreamService, UpstashStreamService>();
         services.AddScoped<IWebhookService, WebhookService>();
+        services.AddSingleton<IApiKeyService, ApiKeyService>();
 
         // High-scale Background processing
         services.AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>();
