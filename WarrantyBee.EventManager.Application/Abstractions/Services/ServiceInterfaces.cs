@@ -1,3 +1,4 @@
+using WarrantyBee.Shared.Infrastructure.Abstractions;
 namespace WarrantyBee.EventManager.Application.Abstractions.Services;
 
 public interface IEventStreamService

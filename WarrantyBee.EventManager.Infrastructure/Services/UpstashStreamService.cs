@@ -2,6 +2,7 @@ using System.Text.Json;
 using StackExchange.Redis;
 using WarrantyBee.EventManager.Application.Abstractions.Services;
 
+
 namespace WarrantyBee.EventManager.Infrastructure.Services;
 
 public class UpstashStreamService : IEventStreamService

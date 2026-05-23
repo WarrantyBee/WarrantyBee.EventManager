@@ -10,3 +10,4 @@ D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Domain\obj\Rele
 D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Domain\obj\Release\net8.0\refint\WarrantyBee.EventManager.Domain.dll
 D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Domain\obj\Release\net8.0\WarrantyBee.EventManager.Domain.pdb
 D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Domain\obj\Release\net8.0\ref\WarrantyBee.EventManager.Domain.dll
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Domain\obj\Release\net8.0\WarrantyBee.EventManager.Domain.csproj.AssemblyReference.cache

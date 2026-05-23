@@ -28,6 +28,36 @@
           }
         }
       },
+      "Konscious.Security.Cryptography.Argon2/1.3.1": {
+        "type": "package",
+        "dependencies": {
+          "Konscious.Security.Cryptography.Blake2": "1.1.1",
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/net8.0/Konscious.Security.Cryptography.Argon2.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Konscious.Security.Cryptography.Argon2.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Konscious.Security.Cryptography.Blake2/1.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Konscious.Security.Cryptography.Blake2.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Konscious.Security.Cryptography.Blake2.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MailKit/4.16.0": {
         "type": "package",
         "dependencies": {
@@ -1193,6 +1223,15 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
       "System.Security.Cryptography.Pkcs/8.0.1": {
         "type": "package",
         "compile": {
@@ -1273,12 +1312,76 @@
           "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
+      "WarrantyBee.Shared.Core/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Konscious.Security.Cryptography.Argon2": "1.3.1"
+        },
+        "compile": {
+          "lib/net8.0/WarrantyBee.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/WarrantyBee.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "WarrantyBee.Shared.Infrastructure/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "7.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.8",
+          "Microsoft.Extensions.Options": "10.0.8",
+          "Polly": "8.6.6",
+          "RestSharp": "112.1.0",
+          "StackExchange.Redis": "2.13.1",
+          "WarrantyBee.Shared.Core": "1.0.1"
+        },
+        "compile": {
+          "lib/net8.0/WarrantyBee.Infrastructure.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/WarrantyBee.Infrastructure.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "WarrantyBee.Shared.Security/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "WarrantyBee.Shared.Core": "1.0.1",
+          "WarrantyBee.Shared.Infrastructure": "1.0.1"
+        },
+        "compile": {
+          "lib/net8.0/WarrantyBee.Security.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/WarrantyBee.Security.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "WarrantyBee.EventManager.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.8",
-          "WarrantyBee.EventManager.Domain": "1.0.0"
+          "WarrantyBee.EventManager.Domain": "1.0.0",
+          "WarrantyBee.Shared.Core": "1.0.1",
+          "WarrantyBee.Shared.Infrastructure": "1.0.3",
+          "WarrantyBee.Shared.Security": "1.0.1"
         },
         "compile": {
           "bin/placeholder/WarrantyBee.EventManager.Application.dll": {}
@@ -1290,6 +1393,9 @@
       "WarrantyBee.EventManager.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "WarrantyBee.Shared.Core": "1.0.1"
+        },
         "compile": {
           "bin/placeholder/WarrantyBee.EventManager.Domain.dll": {}
         },
@@ -1339,6 +1445,44 @@
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml",
         "readme.md"
+      ]
+    },
+    "Konscious.Security.Cryptography.Argon2/1.3.1": {
+      "sha512": "T+OAGwzYYXftahpOxO7J4xA5K6urxwGnWQf3M+Jpi+76Azv/0T3M5SuN+h7/QvXuiqNw3ZEZ5QqVLI5ygDAylw==",
+      "type": "package",
+      "path": "konscious.security.cryptography.argon2/1.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "konscious.security.cryptography.argon2.1.3.1.nupkg.sha512",
+        "konscious.security.cryptography.argon2.nuspec",
+        "lib/net46/Konscious.Security.Cryptography.Argon2.dll",
+        "lib/net46/Konscious.Security.Cryptography.Argon2.xml",
+        "lib/net6.0/Konscious.Security.Cryptography.Argon2.dll",
+        "lib/net6.0/Konscious.Security.Cryptography.Argon2.xml",
+        "lib/net8.0/Konscious.Security.Cryptography.Argon2.dll",
+        "lib/net8.0/Konscious.Security.Cryptography.Argon2.xml",
+        "lib/netstandard1.3/Konscious.Security.Cryptography.Argon2.dll",
+        "lib/netstandard1.3/Konscious.Security.Cryptography.Argon2.xml"
+      ]
+    },
+    "Konscious.Security.Cryptography.Blake2/1.1.1": {
+      "sha512": "odwOyzj/J/lHJZNwFWJGU/LRecBShupAJ2S8TQqZfhUe9niHzu/voBYK5wuVKsvSpzbfupKQYZguVyIk1sgOkQ==",
+      "type": "package",
+      "path": "konscious.security.cryptography.blake2/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "konscious.security.cryptography.blake2.1.1.1.nupkg.sha512",
+        "konscious.security.cryptography.blake2.nuspec",
+        "lib/net46/Konscious.Security.Cryptography.Blake2.dll",
+        "lib/net46/Konscious.Security.Cryptography.Blake2.xml",
+        "lib/net6.0/Konscious.Security.Cryptography.Blake2.dll",
+        "lib/net6.0/Konscious.Security.Cryptography.Blake2.xml",
+        "lib/net8.0/Konscious.Security.Cryptography.Blake2.dll",
+        "lib/net8.0/Konscious.Security.Cryptography.Blake2.xml",
+        "lib/netstandard1.3/Konscious.Security.Cryptography.Blake2.dll",
+        "lib/netstandard1.3/Konscious.Security.Cryptography.Blake2.xml"
       ]
     },
     "MailKit/4.16.0": {
@@ -3065,6 +3209,29 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Memory/4.5.4": {
+      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "type": "package",
+      "path": "system.memory/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Security.Cryptography.Pkcs/8.0.1": {
       "sha512": "CoCRHFym33aUSf/NtWSVSZa99dkd0Hm7OCZUxORBjRB16LNhIEOf8THPqzIYlvKM0nNDAPTRBa1FxEECrgaxxA==",
       "type": "package",
@@ -3247,6 +3414,45 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "WarrantyBee.Shared.Core/1.0.1": {
+      "sha512": "Qs0F0apTcbfc0+MUj5vCvQ8VuT573mXS5bz8HtffDgdlnGujmR25mP4o0WDfLrW3FN+stHxwioJDQBfjJsvEBw==",
+      "type": "package",
+      "path": "warrantybee.shared.core/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net8.0/WarrantyBee.Core.dll",
+        "lib/net8.0/WarrantyBee.Core.xml",
+        "logo.png",
+        "warrantybee.shared.core.1.0.1.nupkg.sha512",
+        "warrantybee.shared.core.nuspec"
+      ]
+    },
+    "WarrantyBee.Shared.Infrastructure/1.0.3": {
+      "sha512": "o6V6IKnp2JB2FHVyj9RUvsTAvgCM2cc2lDh/Y0/BOmP0gAqJaylIvY6+wfPEyn2oybYnOb4KFDhRlebHo59/nA==",
+      "type": "package",
+      "path": "warrantybee.shared.infrastructure/1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net8.0/WarrantyBee.Infrastructure.dll",
+        "lib/net8.0/WarrantyBee.Infrastructure.xml",
+        "logo.png",
+        "warrantybee.shared.infrastructure.1.0.3.nupkg.sha512",
+        "warrantybee.shared.infrastructure.nuspec"
+      ]
+    },
+    "WarrantyBee.Shared.Security/1.0.1": {
+      "sha512": "qiWMhxK89lDFNUX8b6FFqmQPLRiJ8Ib0Se4EIIRxFBik9ivYDJSwo78NvS6JDq2aQkBZtLYuVnfaB9EBxWzfkg==",
+      "type": "package",
+      "path": "warrantybee.shared.security/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net8.0/WarrantyBee.Security.dll",
+        "lib/net8.0/WarrantyBee.Security.xml",
+        "logo.png",
+        "warrantybee.shared.security.1.0.1.nupkg.sha512",
+        "warrantybee.shared.security.nuspec"
+      ]
+    },
     "WarrantyBee.EventManager.Application/1.0.0": {
       "type": "project",
       "path": "../WarrantyBee.EventManager.Application/WarrantyBee.EventManager.Application.csproj",
@@ -3265,11 +3471,11 @@
       "Microsoft.Data.SqlClient >= 7.0.1",
       "Microsoft.Extensions.Hosting >= 10.0.8",
       "Microsoft.Extensions.Http.Polly >= 10.0.8",
-      "Polly >= 8.6.6",
-      "RestSharp >= 112.1.0",
-      "StackExchange.Redis >= 2.13.1",
       "WarrantyBee.EventManager.Application >= 1.0.0",
-      "WarrantyBee.EventManager.Domain >= 1.0.0"
+      "WarrantyBee.EventManager.Domain >= 1.0.0",
+      "WarrantyBee.Shared.Core >= 1.0.1",
+      "WarrantyBee.Shared.Infrastructure >= 1.0.3",
+      "WarrantyBee.Shared.Security >= 1.0.1"
     ]
   },
   "packageFolders": {
@@ -3289,6 +3495,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+        "D:\\WarrantyBee\\NuGet.Config",
         "C:\\Users\\ARIJIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -3299,6 +3506,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
+        "D:\\WarrantyBee\\NuGetPackages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3350,17 +3558,17 @@
             "target": "Package",
             "version": "[10.0.8, )"
           },
-          "Polly": {
+          "WarrantyBee.Shared.Core": {
             "target": "Package",
-            "version": "[8.6.6, )"
+            "version": "[1.0.1, )"
           },
-          "RestSharp": {
+          "WarrantyBee.Shared.Infrastructure": {
             "target": "Package",
-            "version": "[112.1.0, )"
+            "version": "[1.0.3, )"
           },
-          "StackExchange.Redis": {
+          "WarrantyBee.Shared.Security": {
             "target": "Package",
-            "version": "[2.13.1, )"
+            "version": "[1.0.1, )"
           }
         },
         "imports": [
@@ -3375,6 +3583,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

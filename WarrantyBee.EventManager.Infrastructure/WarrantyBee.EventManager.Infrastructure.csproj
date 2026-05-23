@@ -6,14 +6,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="WarrantyBee.Shared.Core" Version="1.0.1" />
+    <PackageReference Include="WarrantyBee.Shared.Infrastructure" Version="1.0.3" />
+    <PackageReference Include="WarrantyBee.Shared.Security" Version="1.0.1" />
     <PackageReference Include="Dapper" Version="2.1.79" />
     <PackageReference Include="MailKit" Version="4.16.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.8" />
     <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="10.0.8" />
-    <PackageReference Include="Polly" Version="8.6.6" />
-    <PackageReference Include="RestSharp" Version="112.1.0" />
-    <PackageReference Include="StackExchange.Redis" Version="2.13.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <PropertyGroup>

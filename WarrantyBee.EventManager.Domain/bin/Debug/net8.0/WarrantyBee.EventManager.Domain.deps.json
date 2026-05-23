@@ -7,8 +7,43 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "WarrantyBee.EventManager.Domain/1.0.0": {
+        "dependencies": {
+          "WarrantyBee.Shared.Core": "1.0.1"
+        },
         "runtime": {
           "WarrantyBee.EventManager.Domain.dll": {}
+        }
+      },
+      "Konscious.Security.Cryptography.Argon2/1.3.1": {
+        "dependencies": {
+          "Konscious.Security.Cryptography.Blake2": "1.1.1",
+          "System.Memory": "4.5.4"
+        },
+        "runtime": {
+          "lib/net8.0/Konscious.Security.Cryptography.Argon2.dll": {
+            "assemblyVersion": "1.3.1.0",
+            "fileVersion": "1.3.1.0"
+          }
+        }
+      },
+      "Konscious.Security.Cryptography.Blake2/1.1.1": {
+        "runtime": {
+          "lib/net8.0/Konscious.Security.Cryptography.Blake2.dll": {
+            "assemblyVersion": "1.1.1.0",
+            "fileVersion": "1.1.1.0"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {},
+      "WarrantyBee.Shared.Core/1.0.1": {
+        "dependencies": {
+          "Konscious.Security.Cryptography.Argon2": "1.3.1"
+        },
+        "runtime": {
+          "lib/net8.0/WarrantyBee.Core.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
         }
       }
     }
@@ -18,6 +53,34 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Konscious.Security.Cryptography.Argon2/1.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T+OAGwzYYXftahpOxO7J4xA5K6urxwGnWQf3M+Jpi+76Azv/0T3M5SuN+h7/QvXuiqNw3ZEZ5QqVLI5ygDAylw==",
+      "path": "konscious.security.cryptography.argon2/1.3.1",
+      "hashPath": "konscious.security.cryptography.argon2.1.3.1.nupkg.sha512"
+    },
+    "Konscious.Security.Cryptography.Blake2/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-odwOyzj/J/lHJZNwFWJGU/LRecBShupAJ2S8TQqZfhUe9niHzu/voBYK5wuVKsvSpzbfupKQYZguVyIk1sgOkQ==",
+      "path": "konscious.security.cryptography.blake2/1.1.1",
+      "hashPath": "konscious.security.cryptography.blake2.1.1.1.nupkg.sha512"
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
+    },
+    "WarrantyBee.Shared.Core/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qs0F0apTcbfc0+MUj5vCvQ8VuT573mXS5bz8HtffDgdlnGujmR25mP4o0WDfLrW3FN+stHxwioJDQBfjJsvEBw==",
+      "path": "warrantybee.shared.core/1.0.1",
+      "hashPath": "warrantybee.shared.core.1.0.1.nupkg.sha512"
     }
   }
 }

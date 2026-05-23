@@ -1,7 +1,10 @@
+using WarrantyBee.Shared.Security.Filters;
+using WarrantyBee.Shared.Core.Enums;
+using WarrantyBee.Shared.Infrastructure.Abstractions;
 using Microsoft.AspNetCore.Mvc;
-using WarrantyBee.EventManager.Application.Abstractions.Services;
+
 using WarrantyBee.EventManager.Application.Contracts.Events;
-using WarrantyBee.EventManager.Api.Filters;
+using WarrantyBee.EventManager.Application.Abstractions.Services;
 
 namespace WarrantyBee.EventManager.Api.Controllers;
 
@@ -38,7 +41,7 @@ public class EventsController : ControllerBase
             return BadRequest("Event Type and Data are required.");
         }
 
-        _telemetry.Log(Domain.Enums.LogLevel.Info, $"Ingesting event: {evt.Type}");
+        _telemetry.Log(WarrantyBee.Shared.Core.Enums.LogLevel.Info, $"Ingesting event: {evt.Type}");
 
         // Push directly to Redis Stream (The shock-absorber)
         await _streamService.PublishAsync("main_event_stream", evt);

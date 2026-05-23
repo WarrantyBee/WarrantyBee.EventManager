@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/BAmm6un9yVUEnGurZ/q9+fAjbj7xcchToA1i/2TSSg=",
+  "Hash": "OPkww4FnqMlYfecA9Jkwjz4v8zjN6w6hRyoZgMBn6BE=",
   "Source": "WarrantyBee.EventManager.Api",
   "BasePath": "_content/WarrantyBee.EventManager.Api",
   "Mode": "Default",
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "w5jfwk6eyr",
-      "Integrity": "xN6z00ZBULJtyrmNN0s0PFoNCqyCsezrEpQ0fN2TRoc=",
+      "Fingerprint": "cufjn4q2ch",
+      "Integrity": "9P350wp64LkIhXzoKKPTgU6uv7+aHopDkPFsfp7I5CM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -143,6 +143,51 @@
       ]
     },
     {
+      "Route": "index.cufjn4q2ch.html",
+      "AssetFile": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9P350wp64LkIhXzoKKPTgU6uv7+aHopDkPFsfp7I5CM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 23 May 2026 08:54:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cufjn4q2ch"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9P350wp64LkIhXzoKKPTgU6uv7+aHopDkPFsfp7I5CM="
+        }
+      ]
+    },
+    {
       "Route": "index.html",
       "AssetFile": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\index.html",
       "Selectors": [],
@@ -153,7 +198,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5793"
+          "Value": "5865"
         },
         {
           "Name": "Content-Type",
@@ -161,11 +206,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xN6z00ZBULJtyrmNN0s0PFoNCqyCsezrEpQ0fN2TRoc=\""
+          "Value": "\"9P350wp64LkIhXzoKKPTgU6uv7+aHopDkPFsfp7I5CM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 May 2026 07:34:44 GMT"
+          "Value": "Sat, 23 May 2026 08:54:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -175,52 +220,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xN6z00ZBULJtyrmNN0s0PFoNCqyCsezrEpQ0fN2TRoc="
-        }
-      ]
-    },
-    {
-      "Route": "index.w5jfwk6eyr.html",
-      "AssetFile": "D:\\WarrantyBee\\WarrantyBee.EventManager\\WarrantyBee.EventManager.Api\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5793"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xN6z00ZBULJtyrmNN0s0PFoNCqyCsezrEpQ0fN2TRoc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 23 May 2026 07:34:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "w5jfwk6eyr"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-xN6z00ZBULJtyrmNN0s0PFoNCqyCsezrEpQ0fN2TRoc="
+          "Value": "sha256-9P350wp64LkIhXzoKKPTgU6uv7+aHopDkPFsfp7I5CM="
         }
       ]
     }

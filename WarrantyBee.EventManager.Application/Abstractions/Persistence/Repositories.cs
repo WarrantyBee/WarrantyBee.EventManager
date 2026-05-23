@@ -1,4 +1,5 @@
 using WarrantyBee.EventManager.Domain.Entities;
+using WarrantyBee.Shared.Security.Abstractions;
 
 namespace WarrantyBee.EventManager.Application.Abstractions.Persistence;
 
@@ -17,9 +18,4 @@ public interface ISubscriptionRepository
 public interface INotificationRepository
 {
     Task CreateNotificationAsync(Notification notification);
-}
-
-public interface IApiKeyRepository
-{
-    Task<bool> ValidateAsync(string appId, string secretHash);
 }

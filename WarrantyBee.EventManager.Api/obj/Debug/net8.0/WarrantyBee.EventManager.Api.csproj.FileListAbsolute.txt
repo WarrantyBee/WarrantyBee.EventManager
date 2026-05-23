@@ -126,3 +126,8 @@ D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\obj\Debug\n
 D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\obj\Debug\net8.0\ref\WarrantyBee.EventManager.Api.dll
 D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\bin\Debug\net8.0\WarrantyBee.EventManager.Api.staticwebassets.runtime.json
 D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\bin\Debug\net8.0\web.config
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\bin\Debug\net8.0\Konscious.Security.Cryptography.Argon2.dll
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\bin\Debug\net8.0\Konscious.Security.Cryptography.Blake2.dll
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\bin\Debug\net8.0\WarrantyBee.Core.dll
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\bin\Debug\net8.0\WarrantyBee.Infrastructure.dll
+D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Api\bin\Debug\net8.0\WarrantyBee.Security.dll

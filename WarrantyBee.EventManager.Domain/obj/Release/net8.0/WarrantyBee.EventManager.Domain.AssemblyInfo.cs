@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WarrantyBee.EventManager.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+455d2167fb0cc90bebb1037f40b595b5a58c2e5f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+731718c9248d2aa0430494b78dac1ee93af15ae5")]
 [assembly: System.Reflection.AssemblyProductAttribute("WarrantyBee.EventManager.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WarrantyBee.EventManager.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

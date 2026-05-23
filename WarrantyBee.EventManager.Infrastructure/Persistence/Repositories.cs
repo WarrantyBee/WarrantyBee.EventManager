@@ -1,7 +1,10 @@
+using WarrantyBee.Shared.Infrastructure.Abstractions;
+using WarrantyBee.Shared.Security.Filters;
 using System.Data;
 using Dapper;
 using WarrantyBee.EventManager.Application.Abstractions.Persistence;
 using WarrantyBee.EventManager.Domain.Entities;
+using WarrantyBee.Shared.Security.Abstractions;
 
 namespace WarrantyBee.EventManager.Infrastructure.Persistence;
 

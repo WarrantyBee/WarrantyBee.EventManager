@@ -1,4 +1,5 @@
 D:\WarrantyBee\EventManagerPublish\WarrantyBee.EventManager.Api.exe
+D:\WarrantyBee\EventManagerPublish\web.config
 D:\WarrantyBee\EventManagerPublish\appsettings.Development.json
 D:\WarrantyBee\EventManagerPublish\appsettings.json
 D:\WarrantyBee\EventManagerPublish\WarrantyBee.EventManager.Api.dll
@@ -7,6 +8,8 @@ D:\WarrantyBee\EventManagerPublish\WarrantyBee.EventManager.Api.runtimeconfig.js
 D:\WarrantyBee\EventManagerPublish\WarrantyBee.EventManager.Api.pdb
 D:\WarrantyBee\EventManagerPublish\BouncyCastle.Cryptography.dll
 D:\WarrantyBee\EventManagerPublish\Dapper.dll
+D:\WarrantyBee\EventManagerPublish\Konscious.Security.Cryptography.Argon2.dll
+D:\WarrantyBee\EventManagerPublish\Konscious.Security.Cryptography.Blake2.dll
 D:\WarrantyBee\EventManagerPublish\MailKit.dll
 D:\WarrantyBee\EventManagerPublish\Microsoft.AspNetCore.OpenApi.dll
 D:\WarrantyBee\EventManagerPublish\Microsoft.Bcl.Cryptography.dll
@@ -71,6 +74,9 @@ D:\WarrantyBee\EventManagerPublish\System.Security.Cryptography.Pkcs.dll
 D:\WarrantyBee\EventManagerPublish\System.Security.Cryptography.ProtectedData.dll
 D:\WarrantyBee\EventManagerPublish\System.Text.Encodings.Web.dll
 D:\WarrantyBee\EventManagerPublish\System.Text.Json.dll
+D:\WarrantyBee\EventManagerPublish\WarrantyBee.Core.dll
+D:\WarrantyBee\EventManagerPublish\WarrantyBee.Infrastructure.dll
+D:\WarrantyBee\EventManagerPublish\WarrantyBee.Security.dll
 D:\WarrantyBee\EventManagerPublish\cs\Microsoft.Data.SqlClient.resources.dll
 D:\WarrantyBee\EventManagerPublish\de\Microsoft.Data.SqlClient.resources.dll
 D:\WarrantyBee\EventManagerPublish\es\Microsoft.Data.SqlClient.resources.dll

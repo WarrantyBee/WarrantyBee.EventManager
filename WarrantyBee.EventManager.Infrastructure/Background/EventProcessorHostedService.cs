@@ -1,8 +1,9 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
-using WarrantyBee.EventManager.Application.Abstractions.Services;
+
 using WarrantyBee.EventManager.Application.Abstractions.Persistence;
+using WarrantyBee.EventManager.Application.Abstractions.Services;
 using WarrantyBee.EventManager.Domain.Entities;
 using WarrantyBee.EventManager.Application.Contracts.Events;
 
