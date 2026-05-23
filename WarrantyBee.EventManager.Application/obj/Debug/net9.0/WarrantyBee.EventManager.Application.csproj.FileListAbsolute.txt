@@ -1,6 +1,0 @@
-D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Debug\net9.0\WarrantyBee.EventManager.Application.csproj.AssemblyReference.cache
-D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Debug\net9.0\WarrantyBee.EventManager.Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Debug\net9.0\WarrantyBee.EventManager.Application.AssemblyInfoInputs.cache
-D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Debug\net9.0\WarrantyBee.EventManager.Application.AssemblyInfo.cs
-D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Debug\net9.0\WarrantyBee.EventManager.Application.csproj.CoreCompileInputs.cache
-D:\WarrantyBee\WarrantyBee.EventManager\WarrantyBee.EventManager.Application\obj\Debug\net9.0\WarrantyBee.EventManager.Application.sourcelink.json

@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\WarrantyBee.EventManager.Api.props" />
-</Project>

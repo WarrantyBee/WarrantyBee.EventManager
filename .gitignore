@@ -1,0 +1,11 @@
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.doccache
+*.suo
+.vs/
+.vscode/
+.idea/
+*.nupkg
+publish/
