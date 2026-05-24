@@ -76,7 +76,7 @@ public class SubscriptionRepository : ISubscriptionRepository
 }
 
 /// <summary>
-/// Implementation of <see cref="IApiKeyRepository"/> for validating stateful API keys.
+/// Implementation of <see cref="IApiKeyRepository"/> for validating stateful API keys and endpoint permissions.
 /// </summary>
 public class ApiKeyRepository : IApiKeyRepository
 {
@@ -87,18 +87,35 @@ public class ApiKeyRepository : IApiKeyRepository
         _connectionFactory = connectionFactory;
     }
 
-    public async Task<bool> ValidateAsync(string appId, string secretHash)
+    public async Task<bool> ValidateAsync(string appId, string secretHash, string requestedPath)
     {
         using var connection = _connectionFactory.CreateConnection();
         var sql = @"SELECT COUNT(1) 
                     FROM tblApiKeys k 
                     JOIN tblApiClients c ON k.client_id = c.id 
+                    LEFT JOIN tblApiKeyEndpoints e ON k.id = e.api_key_id
                     WHERE c.app_id = @appId 
                     AND k.secret_hash = @secretHash 
                     AND k.is_revoked = 0 
                     AND k.expires_at > GETUTCDATE() 
-                    AND k.void = 0";
-        var count = await connection.ExecuteScalarAsync<int>(sql, new { appId, secretHash });
+                    AND k.void = 0
+                    AND (e.endpoint_path IS NULL OR @requestedPath LIKE e.endpoint_path + '%')";
+        var count = await connection.ExecuteScalarAsync<int>(sql, new { appId, secretHash, requestedPath });
+        return count > 0;
+    }
+
+    public async Task<bool> ValidateKeyAsync(string keyHash, string requestedPath)
+    {
+        using var connection = _connectionFactory.CreateConnection();
+        var sql = @"SELECT COUNT(1) 
+                    FROM tblApiKeys k 
+                    LEFT JOIN tblApiKeyEndpoints e ON k.id = e.api_key_id
+                    WHERE k.secret_hash = @keyHash 
+                    AND k.is_revoked = 0 
+                    AND k.expires_at > GETUTCDATE() 
+                    AND k.void = 0
+                    AND (e.endpoint_path IS NULL OR @requestedPath LIKE e.endpoint_path + '%')";
+        var count = await connection.ExecuteScalarAsync<int>(sql, new { keyHash, requestedPath });
         return count > 0;
     }
 }
