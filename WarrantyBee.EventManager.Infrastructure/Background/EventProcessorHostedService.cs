@@ -6,6 +6,7 @@ using WarrantyBee.EventManager.Application.Abstractions.Persistence;
 using WarrantyBee.EventManager.Application.Abstractions.Services;
 using WarrantyBee.EventManager.Domain.Entities;
 using WarrantyBee.EventManager.Application.Contracts.Events;
+using WarrantyBee.Shared.Core.Enums;
 
 namespace WarrantyBee.EventManager.Infrastructure.Background;
 
@@ -90,8 +91,24 @@ public class EventProcessorHostedService : BackgroundService
             if (success) successCount++;
         }
 
+        // --- MVP SPECIAL HANDLING: Trigger Automated Notifications ---
+        if (evt.Type == "claim.status_changed")
+        {
+            await HandleClaimStatusChanged(evt);
+        }
+
         // 5. Update final status
         var finalStatus = successCount == subscriptions.Count() ? "COMPLETED" : (successCount > 0 ? "PARTIAL" : "FAILED");
         await eventRepository.UpdateEventStatusAsync(logId, finalStatus);
+    }
+
+    private async Task HandleClaimStatusChanged(IncomingEvent evt)
+    {
+        // Extract data (assuming JSON structure)
+        // For Day 1, we simulate triggering the JobScheduler
+        _logger.LogInformation("Triggering ClaimStatusUpdated notification for claim status change.");
+        
+        // In a real microservice, we would use IJobSchedulerClient here.
+        // We'll leave the hook ready.
     }
 }

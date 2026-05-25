@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="WarrantyBee.Shared.Core" Version="1.0.4" />
+    <PackageReference Include="WarrantyBee.Shared.Core" Version="1.0.7" />
   </ItemGroup>
 
 </Project>
